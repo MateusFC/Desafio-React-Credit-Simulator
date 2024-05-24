@@ -18,3 +18,13 @@ Clone the repo and execute the exercise. In the end, share the code with us via 
     - We want to see how you handle hooks, state among other tecnical details
     - Use Typescript
     - We have already a api mock in place so you can consume. Just run `pnpm run mock`. The endpoint is at http://localhost:3001/limits
+  
+   
+# Interface Amount
+![image](https://github.com/MateusFC/Desafio-React-Credit-Simulator/assets/46448166/89de3faa-4698-42a1-9ed9-023887ef18b5)
+
+# Interface Months
+![image](https://github.com/MateusFC/Desafio-React-Credit-Simulator/assets/46448166/acad8ce4-7bb5-461e-b3f6-95cc8908d79f)
+
+# Interface Resume  
+![image](https://github.com/MateusFC/Desafio-React-Credit-Simulator/assets/46448166/198ddd6d-1b86-4f94-b57f-7c14cbc79f41)
