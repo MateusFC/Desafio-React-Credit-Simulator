@@ -1,9 +1,10 @@
 import React from 'react';
-import { Box, Button, Heading, Flex, Text } from '@chakra-ui/react';
+import { Box, Button, Heading, Flex, Text, useToast } from '@chakra-ui/react';
 import useLocalStorage from '../../Hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
 
 const ResumeStep: React.FC = () => {
+    const toast = useToast()
     const navigate = useNavigate()
     const [amount] = useLocalStorage<number>('amount', 0);
     const [months] = useLocalStorage<number>('month', 0);
@@ -12,7 +13,16 @@ const ResumeStep: React.FC = () => {
     const interestRate = 0.01;
     const totalAmount = amount * (1 + interestRate * months);
     const monthlyPayment = totalAmount / months;
-
+    const handleSendSimulation = () => {
+        toast({
+            title: 'Proposta Enviada',
+            description: "Aguarde, entraremos em contato em breve.",
+            status: 'success',
+            duration: 9000,
+            position: "top-right",
+            isClosable: true,
+        })
+    }
     return (
         <Flex flexDirection="column" gap={8} alignItems="center" justifyContent={"center"}>
             <Heading as="h2" fontSize="2xl" fontWeight="semibold" color={'GrayText'} textAlign="center">
@@ -37,8 +47,8 @@ const ResumeStep: React.FC = () => {
                     </Box>
                 </Flex>
             </Box>
-            <Button colorScheme="green" onClick={() => console.log('Submit')} size="lg">
-                Fazer Investimento
+            <Button colorScheme="green" onClick={handleSendSimulation} size="lg">
+                Enviar Simulação
             </Button>
             <Button colorScheme="blue" onClick={() => navigate("/")}>
                 Fazer simulação novamente

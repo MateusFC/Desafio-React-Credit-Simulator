@@ -9,7 +9,6 @@ const AmountStep: React.FC = () => {
     const navigate = useNavigate();
     const { limits, loading } = useLimits();
     const [amount, setAmount] = useLocalStorage<number>('amount', limits?.min ?? 0);
-
     useEffect(() => {
         if (amount === 0 && limits) {
             setAmount(limits.min);
