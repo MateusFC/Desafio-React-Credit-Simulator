@@ -1,8 +1,8 @@
-import { ILimitsData } from '../@types/limits';
+import { LimitsData } from '../@types/limits';
 import API from './api';
 
 async function getLimits() {
-  const { data } = await API.get<ILimitsData>('/limits');
+  const { data } = await API.get<LimitsData>('/limits');
   return data;
 }
 

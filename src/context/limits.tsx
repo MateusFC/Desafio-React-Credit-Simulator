@@ -1,16 +1,7 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { useToast } from '@chakra-ui/react';
 import getLimits from '../services/limits-service';
-
-interface Limits {
-  min: number;
-  max: number;
-}
-
-interface LimitsContextValue {
-  limits: Limits | null;
-  loading: boolean;
-}
+import { LimitsContextValue, LimitsData } from '../@types/limits';
 
 const LimitsContext = createContext<LimitsContextValue>({} as LimitsContextValue);
 
@@ -20,7 +11,7 @@ interface LimitsProviderProps {
 
 export const LimitsProvider: React.FC<LimitsProviderProps> = ({ children }) => {
   const toast = useToast();
-  const [limits, setLimits] = useState<Limits | null>(null);
+  const [limits, setLimits] = useState<LimitsData | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
