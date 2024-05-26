@@ -1,7 +1,7 @@
 import { Button, Flex, Heading } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import RangerComponent from "../../components/RangerComponent";
-import useLocalStorage from "../../Hooks/useLocalStorage";
+import useLocalStorage from "../../hooks/useLocalStorage";
 import { useEffect } from "react";
 
 const MonthsStep: React.FC = () => {

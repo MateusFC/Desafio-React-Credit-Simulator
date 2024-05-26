@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Button, Flex, Heading } from '@chakra-ui/react';
-import useLocalStorage from '../../Hooks/useLocalStorage';
-import useLimits from '../../Hooks/useLimits';
+import useLocalStorage from '../../hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
 import RangerComponent from '../../components/RangerComponent';
+import { useLimits } from '../../context/limits';
 
 const AmountStep: React.FC = () => {
     const navigate = useNavigate();

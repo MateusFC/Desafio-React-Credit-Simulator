@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Heading, Flex, Text, useToast } from '@chakra-ui/react';
-import useLocalStorage from '../../Hooks/useLocalStorage';
+import useLocalStorage from '../../hooks/useLocalStorage';
 import { useNavigate } from 'react-router-dom';
 
 const ResumeStep: React.FC = () => {
